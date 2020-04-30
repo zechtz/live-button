@@ -1,4 +1,4 @@
-# A simple Button showcasing Phoenix's LiveView Library
+# Phoenix's LiveView Examples
 
 To start your Phoenix server:
 
@@ -8,4 +8,4 @@ To start your Phoenix server:
 ## Screenshot
 ![Screenshot](/assets/static/screenshot.png)
 
-Now you can visit [`localhost:4000/light`](http://localhost:4000/light) from your browser.
+Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
