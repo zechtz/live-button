@@ -1,11 +1,6 @@
 defmodule LiveViewWeb.SearchLive do
   use LiveViewWeb, :live_view
-
   alias LiveView.Stores
-
-  def mount(_params, _session, socket) do
-    {:ok, assign(socket, zip: "", stores: [], loading: false)}
-  end
 
   def mount(_params, _session, socket) do
     socket =
