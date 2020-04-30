@@ -9,6 +9,9 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## Screenshots
 
+### Layout
+![Screenshot](/assets/static/app.png)
+
 ### Light Button
 ![Screenshot](/assets/static/screenshot.png)
 
