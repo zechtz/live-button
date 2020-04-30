@@ -12,4 +12,6 @@
 
 @import "./live_view.css";
 
+@import "./nav.css";
+
 @import "tailwindcss/utilities";
