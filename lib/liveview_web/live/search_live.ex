@@ -20,7 +20,7 @@ defmodule LiveViewWeb.SearchLive do
 
       <form phx-submit="zip-search">
         <input type="text" name="zip" value="<%= @zip %>"
-               placeholder="Zip Code"
+               placeholder="Zip Code e.g 80204"
                autofocus autocomplete="off"
                <%= if @loading, do: "readonly" %> />
 
