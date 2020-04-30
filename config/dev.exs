@@ -1,10 +1,10 @@
 use Mix.Config
 
 # Configure your database
-config :livebutton, Livebutton.Repo,
+config :liveview, LiveView.Repo,
   username: "postgres",
   password: "secret",
-  database: "livebutton_dev",
+  database: "liveview_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -15,7 +15,7 @@ config :livebutton, Livebutton.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :livebutton, LivebuttonWeb.Endpoint,
+config :liveview, LiveViewWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -55,13 +55,13 @@ config :livebutton, LivebuttonWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :livebutton, LivebuttonWeb.Endpoint,
+config :liveview, LiveViewWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/livebutton_web/(live|views)/.*(ex)$",
-      ~r"lib/livebutton_web/templates/.*(eex)$"
+      ~r"lib/liveview_web/(live|views)/.*(ex)$",
+      ~r"lib/liveview_web/templates/.*(eex)$"
     ]
   ]
 

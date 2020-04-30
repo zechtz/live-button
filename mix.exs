@@ -1,9 +1,9 @@
-defmodule Livebutton.MixProject do
+defmodule LiveView.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :livebutton,
+      app: :liveview,
       version: "0.1.0",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule Livebutton.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Livebutton.Application, []},
+      mod: {LiveView.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

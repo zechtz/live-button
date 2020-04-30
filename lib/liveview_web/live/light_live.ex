@@ -1,5 +1,5 @@
-defmodule LivebuttonWeb.LightLive do
-  use LivebuttonWeb, :live_view
+defmodule LiveViewWeb.LightLive do
+  use LiveViewWeb, :live_view
 
   def mount(_params, _session, socket) do
     socket = assign(socket, :brightness, 10)

@@ -1,11 +1,11 @@
-defmodule LivebuttonWeb.Router do
-  use LivebuttonWeb, :router
+defmodule LiveViewWeb.Router do
+  use LiveViewWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {LivebuttonWeb.LayoutView, :root}
+    plug :put_root_layout, {LiveViewWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -14,15 +14,16 @@ defmodule LivebuttonWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", LivebuttonWeb do
+  scope "/", LiveViewWeb do
     pipe_through :browser
 
     live "/", PageLive, :index
     live "/light", LightLive
+    live "/license", LicenseLive
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", LivebuttonWeb do
+  # scope "/api", LiveViewWeb do
   #   pipe_through :api
   # end
 
@@ -38,7 +39,7 @@ defmodule LivebuttonWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: LivebuttonWeb.Telemetry
+      live_dashboard "/dashboard", metrics: LiveViewWeb.Telemetry
     end
   end
 end

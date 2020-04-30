@@ -1,4 +1,4 @@
-defmodule LivebuttonWeb.Telemetry do
+defmodule LiveViewWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -29,11 +29,11 @@ defmodule LivebuttonWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("livebutton.repo.query.total_time", unit: {:native, :millisecond}),
-      summary("livebutton.repo.query.decode_time", unit: {:native, :millisecond}),
-      summary("livebutton.repo.query.query_time", unit: {:native, :millisecond}),
-      summary("livebutton.repo.query.queue_time", unit: {:native, :millisecond}),
-      summary("livebutton.repo.query.idle_time", unit: {:native, :millisecond}),
+      summary("liveview.repo.query.total_time", unit: {:native, :millisecond}),
+      summary("liveview.repo.query.decode_time", unit: {:native, :millisecond}),
+      summary("liveview.repo.query.query_time", unit: {:native, :millisecond}),
+      summary("liveview.repo.query.queue_time", unit: {:native, :millisecond}),
+      summary("liveview.repo.query.idle_time", unit: {:native, :millisecond}),
 
       # VM Metrics
       summary("vm.memory.total", unit: {:byte, :kilobyte}),
@@ -47,7 +47,7 @@ defmodule LivebuttonWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {LivebuttonWeb, :count_users, []}
+      # {LiveViewWeb, :count_users, []}
     ]
   end
 end

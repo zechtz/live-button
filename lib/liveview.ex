@@ -1,6 +1,6 @@
-defmodule Livebutton do
+defmodule LiveView do
   @moduledoc """
-  Livebutton keeps the contexts that define your domain
+  LiveView keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

@@ -1,5 +1,5 @@
-defmodule LivebuttonWeb.ErrorView do
-  use LivebuttonWeb, :view
+defmodule LiveViewWeb.ErrorView do
+  use LiveViewWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

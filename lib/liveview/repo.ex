@@ -1,5 +1,5 @@
-defmodule Livebutton.Repo do
+defmodule LiveView.Repo do
   use Ecto.Repo,
-    otp_app: :livebutton,
+    otp_app: :liveview,
     adapter: Ecto.Adapters.Postgres
 end

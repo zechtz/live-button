@@ -1,5 +1,5 @@
-defmodule LivebuttonWeb.PageLive do
-  use LivebuttonWeb, :live_view
+defmodule LiveViewWeb.PageLive do
+  use LiveViewWeb, :live_view
 
   @impl true
   def mount(_params, _session, socket) do
@@ -26,7 +26,7 @@ defmodule LivebuttonWeb.PageLive do
   end
 
   defp search(query) do
-    if not LivebuttonWeb.Endpoint.config(:code_reloader) do
+    if not LiveViewWeb.Endpoint.config(:code_reloader) do
       raise "action disabled when not in development"
     end
 

@@ -7,15 +7,15 @@
 # General application configuration
 use Mix.Config
 
-config :livebutton,
-  ecto_repos: [Livebutton.Repo]
+config :liveview,
+  ecto_repos: [LiveView.Repo]
 
 # Configures the endpoint
-config :livebutton, LivebuttonWeb.Endpoint,
+config :liveview, LiveViewWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "mE1XShlgvJM0Fg/kna0w58xIAmoki6hMMQNrFbkKCSweo1Vs9hXjTwSv8BNm1p/h",
-  render_errors: [view: LivebuttonWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Livebutton.PubSub,
+  render_errors: [view: LiveViewWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: LiveView.PubSub,
   live_view: [signing_salt: "VfGT6sBI"]
 
 # Configures Elixir's Logger

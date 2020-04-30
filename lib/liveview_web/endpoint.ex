@@ -1,16 +1,16 @@
-defmodule LivebuttonWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :livebutton
+defmodule LiveViewWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :liveview
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_livebutton_key",
+    key: "_liveview_key",
     signing_salt: "fB96I67d"
   ]
 
-  socket "/socket", LivebuttonWeb.UserSocket,
+  socket "/socket", LiveViewWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -22,7 +22,7 @@ defmodule LivebuttonWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :livebutton,
+    from: :liveview,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -32,7 +32,7 @@ defmodule LivebuttonWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :livebutton
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :liveview
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -50,5 +50,5 @@ defmodule LivebuttonWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug LivebuttonWeb.Router
+  plug LiveViewWeb.Router
 end
