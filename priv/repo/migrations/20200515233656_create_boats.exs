@@ -10,6 +10,5 @@ defmodule Liveview.Repo.Migrations.CreateBoats do
 
       timestamps()
     end
-
   end
 end
