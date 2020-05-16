@@ -17,12 +17,13 @@ defmodule LiveViewWeb.Router do
   scope "/", LiveViewWeb do
     pipe_through :browser
 
-    live "/", LightLive
+    live "/", FilterLive
     live "/light", LightLive
     live "/license", LicenseLive
     live "/live-dashboard", DashboardLive
     live "/search", SearchLive
     live "/autocomplete", AutocompleteLive
+    live "/filter", FilterLive
   end
 
   # Other scopes may use custom stacks.
