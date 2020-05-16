@@ -1,4 +1,4 @@
-defmodule Liveview.Boats.Boat do
+defmodule LiveView.Boats.Boat do
   use Ecto.Schema
   import Ecto.Changeset
 

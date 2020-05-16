@@ -1,12 +1,12 @@
-defmodule Liveview.Boats do
+defmodule LiveView.Boats do
   @moduledoc """
   The Boats context.
   """
 
   import Ecto.Query, warn: false
-  alias Liveview.Repo
+  alias LiveView.Repo
 
-  alias Liveview.Boats.Boat
+  alias LiveView.Boats.Boat
 
   @doc """
   Returns the list of boats.

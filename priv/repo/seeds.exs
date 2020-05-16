@@ -10,8 +10,8 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 #
-alias Liveview.Repo
-alias Liveview.Boats.Boat
+alias LiveView.Repo
+alias LiveView.Boats.Boat
 
 %Boat{
   model: "1760 Retriever Jon Deluxe",
